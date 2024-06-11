@@ -21,6 +21,6 @@ export class TokensController {
   @ApiResponse({ status: 201, type: Token })
   @Post()
   async addOneToken(@Body() dto: CreateTokenDto) {
-    return this.tokenService.createOneToken(dto);
+    return await this.tokenService.createOneToken(dto);
   }
 }

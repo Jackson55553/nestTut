@@ -9,10 +9,10 @@ export class UsersService {
 
   async createUser(dto: UserDto) {
     console.log(dto.address);
-    const newUser = await this.userRepository.findOne({
+    const oldUser = await this.userRepository.findOne({
       where: { address: dto.address },
     });
-    if (!newUser) {
+    if (!oldUser) {
       const user = await this.userRepository.create(dto);
       return user;
     } else {

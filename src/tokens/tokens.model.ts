@@ -89,7 +89,7 @@ export class Token extends Model<Token, TokenCreationAttrs> {
     description: 'token description',
   })
   @Column({
-    type: DataType.STRING,
+    type: DataType.TEXT,
     allowNull: true,
   })
   description: string;

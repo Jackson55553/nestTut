@@ -7,15 +7,15 @@ async function start() {
   const app = await NestFactory.create(App);
 
   const config = new DocumentBuilder()
-    .setTitle('first nest app')
-    .setDescription('docs for first app')
+    .setTitle('Token For Ever')
+    .setDescription('docs for Token For Ever')
     .setVersion('0.0.1')
-    .addTag('belchonok')
+    .addTag('TFE')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/docs/api', app, document);
 
-  app.enableCors({ origin: 'http://localhost:3003', credentials: false });
+  app.enableCors({ origin: 'https://tokenforever.space', credentials: false });
 
   await app.listen(PORT, () => {
     console.log('started on ', PORT);
