@@ -12,7 +12,7 @@ import { Token } from './tokens/tokens.model';
   providers: [],
   imports: [
     ConfigModule.forRoot({
-      envFilePath: `.${process.env.NODE_ENV}.env`,
+      envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
     SequelizeModule.forRoot({
       dialect: 'postgres',
@@ -22,7 +22,7 @@ import { Token } from './tokens/tokens.model';
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
       models: [User, Token],
-      autoLoadModels: false,
+      autoLoadModels: true,
       synchronize: true,
     }),
     WalletsModule,
