@@ -22,7 +22,7 @@ import { Token } from './tokens/tokens.model';
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
       models: [User, Token],
-      autoLoadModels: true,
+      autoLoadModels: false,
       synchronize: true,
     }),
     WalletsModule,
