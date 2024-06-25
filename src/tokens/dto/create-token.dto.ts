@@ -42,4 +42,10 @@ export class CreateTokenDto {
     description: 'token description',
   })
   readonly description: string;
+
+  @ApiProperty({
+    example: 'devnet',
+    description: 'token creation network',
+  })
+  readonly network: string;
 }

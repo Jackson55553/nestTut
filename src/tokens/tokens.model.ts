@@ -93,4 +93,14 @@ export class Token extends Model<Token, TokenCreationAttrs> {
     allowNull: true,
   })
   description: string;
+
+  @ApiProperty({
+    example: 'devnet',
+    description: 'token creation network',
+  })
+  @Column({
+    type: DataType.STRING,
+    allowNull: true,
+  })
+  network: string;
 }

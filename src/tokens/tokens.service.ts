@@ -9,7 +9,9 @@ export class TokensService {
 
   async getAllTokens() {
     try {
-      const tokens = await this.tokenRepository.findAll();
+      const tokens = await this.tokenRepository.findAll({
+        where: { network: 'mainnet' },
+      });
       return tokens.length;
     } catch (error) {
       console.log(error);
