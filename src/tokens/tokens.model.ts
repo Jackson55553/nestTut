@@ -38,7 +38,7 @@ export class Token extends Model<Token, TokenCreationAttrs> {
     description: 'image url',
   })
   @Column({
-    type: DataType.STRING,
+    type: DataType.TEXT,
     allowNull: false,
   })
   imageUrl: string;
@@ -48,7 +48,7 @@ export class Token extends Model<Token, TokenCreationAttrs> {
     description: 'image url',
   })
   @Column({
-    type: DataType.STRING,
+    type: DataType.TEXT,
     unique: true,
     allowNull: false,
   })
