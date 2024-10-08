@@ -15,7 +15,7 @@ async function start() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/docs/api', app, document);
 
-  app.enableCors({ origin: '*', credentials: false });
+  app.enableCors({ origin: process.env.ORIGIN, credentials: false });
 
   await app.listen(PORT, () => {
     console.log('started on ', PORT);
